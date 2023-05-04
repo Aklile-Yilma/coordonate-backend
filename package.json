@@ -36,11 +36,12 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "yarn lint"
     }
   },
   "lint-staged": {
-    "*.{ts,js,json,md}": [
+    "*.ts": [
+      "eslint --fix",
       "prettier --single-quote --write",
       "git add"
     ]

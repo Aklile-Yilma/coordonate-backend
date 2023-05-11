@@ -7,6 +7,7 @@ const client = new Client({
   password: 'rootUser',
   database: 'postgres',
 });
+
 client.connect();
 
 client.query('Select * from users', (err: any, res: any) => {
@@ -14,7 +15,7 @@ client.query('Select * from users', (err: any, res: any) => {
     console.log(res.rows);
   } else {
     console.log(err.message);
-  }
+  } 
 
   client.end();
 });

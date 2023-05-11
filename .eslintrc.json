@@ -20,6 +20,12 @@
     "prettier/prettier": "warn",
     "no-unused-vars": "warn",
     "no-console": "warn",
-    "func-names": "off"
+    "func-names": "off",
+    "node/no-unsupported-features/es-syntax": "off"
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {}
+    }
   }
 }

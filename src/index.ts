@@ -1,5 +1,6 @@
 import express from 'express';
 import bodyParser from 'body-parser';
+// eslint-disable-next-line import/extensions, node/no-missing-import
 import AppDataSource from './config/ormconfig';
 
 require('dotenv').config();
@@ -9,7 +10,9 @@ app.use(bodyParser);
 const port = parseInt(process.env.PORT || '4000', 10);
 
 AppDataSource.initialize()
-  .then(() => {})
+  .then(() => {
+    console.log('database connected');
+  })
   .catch((error) => {
     console.log(error);
   });
